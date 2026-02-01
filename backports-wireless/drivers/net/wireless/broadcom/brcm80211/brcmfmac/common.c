@@ -507,6 +507,7 @@ struct brcmf_mp_device *brcmf_get_module_param(struct device *dev,
 #ifdef DEBUG
 	settings->ignore_probe_fail = !!brcmf_ignore_probe_fail;
 #endif
+    settings->vht_mask = brcm_vht_mask;
 #ifdef CPTCFG_BRCMFMAC_ANDROID
 	brcmf_mp_attach();
 #endif
@@ -675,4 +676,3 @@ static void __exit brcmfmac_module_exit(void)
 
 module_init(brcmfmac_module_init);
 module_exit(brcmfmac_module_exit);
-
